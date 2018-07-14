@@ -1,0 +1,3 @@
+project=ennigaldi
+test=rspec
+template=erb
