@@ -11,6 +11,7 @@ group :development do
   # See: http://hanamirb.org/guides/projects/code-reloading
   gem 'shotgun', platforms: :ruby
   gem 'hanami-webconsole'
+  gem 'rubocop', require: false
 end
 
 group :test, :development do
@@ -20,6 +21,7 @@ end
 group :test do
   gem 'rspec'
   gem 'capybara'
+  gem 'webmock'
 end
 
 group :production do
