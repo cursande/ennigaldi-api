@@ -4,11 +4,14 @@ gem 'rake'
 gem 'hanami',       '~> 1.2'
 gem 'hanami-model', '~> 1.2'
 
+# database
 gem 'pg'
 
+# web requests
+gem 'http'
+gem 'httplog'
+
 group :development do
-  # Code reloading
-  # See: http://hanamirb.org/guides/projects/code-reloading
   gem 'shotgun', platforms: :ruby
   gem 'hanami-webconsole'
   gem 'rubocop', require: false
