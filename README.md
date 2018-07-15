@@ -1,6 +1,12 @@
 # Ennigaldi
 
-Welcome to your new Hanami project!
+https://collections.museumvictoria.com.au/developers
+
+- Articles
+- Items
+- Images
+- Species
+- Specimens
 
 ## Setup
 
