@@ -7,9 +7,19 @@ gem 'hanami-model', '~> 1.2'
 # database
 gem 'pg'
 
-# web requests
+# network
 gem 'http'
 gem 'httplog'
+
+# JSON encoding/parsing
+gem 'oj'
+
+# Background jobs
+gem 'sidekiq'
+
+# caching/key-value datastore
+gem 'redis'
+gem 'redis-namespace'
 
 group :development do
   gem 'shotgun', platforms: :ruby
@@ -25,6 +35,7 @@ group :test do
   gem 'rspec'
   gem 'capybara'
   gem 'webmock'
+  gem 'database_cleaner'
 end
 
 group :production do
