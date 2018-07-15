@@ -8,6 +8,10 @@ https://collections.museumvictoria.com.au/developers
 - Species
 - Specimens
 
+http://help.nla.gov.au/trove/building-with-trove/api
+http://help.nla.gov.au/trove/building-with-trove/api-technical-guide
+http://help.nla.gov.au/trove/experiments
+
 ## Setup
 
 How to run tests:
