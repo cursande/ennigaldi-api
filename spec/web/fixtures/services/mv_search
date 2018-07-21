@@ -1,0 +1,223 @@
+[
+  {
+    "recordType": "item",
+    "comments": [],
+    "licence": {
+      "name": "Attribution 4.0 International",
+      "shortName": "CC BY",
+      "uri": "https://creativecommons.org/licenses/by/4.0"
+    },
+    "dateModified": "2017-12-11T08:34:00Z",
+    "displayTitle": "Photograph - 'Boots a Clean', Cairo, Egypt, Private John Lord, World War I, circa 1915",
+    "category": "History & Technology",
+    "discipline": "Technology",
+    "type": "Image",
+    "registrationNumber": "MM 120025",
+    "collectionNames": [
+      "Military Memorabilia Collection",
+      "John Lord Collection",
+      "Returned and Services League (RSL) Collection"
+    ],
+    "collectingAreas": [
+      "Arms",
+      "Images & Image Making",
+      "Public Life & Institutions"
+    ],
+    "classifications": [
+      "Military history",
+      "Service",
+      "Portraits"
+    ],
+    "objectName": "Photograph - 'Boots a Clean', Cairo, Egypt, Private John Lord, World War I, circa 1915",
+    "objectSummary": "Black and white photographic print. \n\nAttached to a small notebook used as a photograph album, containing 55 black and white photographs of ANZAC soldiers in Egypt, Mudros and Gallipoli during World War I. The photographs were taken by an Australian soldier, Sergeant John Lord or one of his friends (to be verified). John Lord served in the 13th Field Ambulance and returned to Australia shortly after the end of the War in 1919.\n\nThe album was one of many souvenirs brought back to Australia after World War I by Lord. Part of a larger collection of photograph albums, images, documents and World War I memorabilia donated by John Lord to Museum Victoria.\n\nImage depicting two Egyptian children who, according to the inscription, would pester the troops about cleaning their boots or other little odd jobs.",
+    "physicalDescription": "Black and white photograph, mounted in a small, blue, army-issued notebook used as a photograph album.",
+    "inscription": "Hand written in pencil directly below photograph: 'Boots a clean'. Hand written in ink on verso: 'Some of the pests./ \"Boots a clean\" / \"Very good very nice\" / '1/2 piastre' \"Come on / \"Johnny\"'.",
+    "associations": [
+      {
+        "type": "Place & Date Depicted",
+        "name": null,
+        "date": "circa 1915",
+        "comments": null,
+        "streetAddress": null,
+        "locality": "Cairo",
+        "region": null,
+        "state": null,
+        "country": "Egypt"
+      },
+      {
+        "type": "Previous Owner",
+        "name": "Sergeant John Lord",
+        "date": null,
+        "comments": "Private John Lord was originally identified as the photographer of the album, but as there is no record of him serving on Gallipoli, and images in the album depict Gallipoli, the photographer is probably an unknown soldier.",
+        "streetAddress": null,
+        "locality": null,
+        "region": null,
+        "state": null,
+        "country": null
+      }
+    ],
+    "keywords": [
+      "Australian Army",
+      "Militaria: Australian",
+      "Military Memorabilia",
+      "Wars & Conflicts",
+      "World War I, 1914-1918"
+    ],
+    "significance": "This photograph is in a very significant album which includes a number of excellent photographs of Australian soldiers at Gallipoli and surrounding areas. Some of these are particularly clear and well-composed - for example, 'Rest Gully Anzac' shows hundreds of soldiers sitting and standing around talking and a valley with lots of dugouts and shelters. 'Old Kit etc at Anzac Ordnance Stores 1915' is another clear photograph, ,showing rubbish that the Anzacs generated at Gallipoli. Many of the photographs were taken when the weather was hot, but there are also a number of images taken in the snow. Another, 'Extreme Right of Anzac' demonstrates the steepness of the terrain and the mixture of clothing that the soldiers wore. All of the photographs appear to have been taken at times when the photographer was 'off duty', since the images are of the landscape or soldiers at rest.",
+    "modelScale": null,
+    "shape": null,
+    "dimensions": [
+      {
+        "configuration": "Image Dimensions - Photograph",
+        "dimensions": "55 mm (Width), 82 mm (Height)",
+        "comments": null
+      },
+      {
+        "configuration": "Image Dimensions - Photograph album page",
+        "dimensions": "145 mm (Width), 100 mm (Height)",
+        "comments": null
+      }
+    ],
+    "references": null,
+    "bibliographies": [],
+    "modelNames": [],
+    "brands": [],
+    "relatedItemIds": [],
+    "relatedSpecimenIds": [],
+    "relatedArticleIds": [
+      "articles/4263",
+      "articles/14946"
+    ],
+    "relatedSpeciesIds": [],
+    "media": [
+      {
+        "type": "image",
+        "alternativeText": null,
+        "large": {
+          "width": 1954,
+          "height": 3000,
+          "uri": "https://collections.museumvictoria.com.au/content/media/31/392331-large.jpg",
+          "size": 982916
+        },
+        "medium": {
+          "width": 977,
+          "height": 1500,
+          "uri": "https://collections.museumvictoria.com.au/content/media/31/392331-medium.jpg",
+          "size": 185234
+        },
+        "small": {
+          "width": 326,
+          "height": 500,
+          "uri": "https://collections.museumvictoria.com.au/content/media/31/392331-small.jpg",
+          "size": 32266
+        },
+        "thumbnail": {
+          "width": 250,
+          "height": 250,
+          "uri": "https://collections.museumvictoria.com.au/content/media/31/392331-thumbnail.jpg",
+          "size": 14845
+        },
+        "dateModified": "2016-11-09T23:25:00Z",
+        "caption": null,
+        "creators": [],
+        "sources": [
+          "Museums Victoria"
+        ],
+        "credit": null,
+        "rightsStatement": "Public Domain",
+        "licence": {
+          "name": "Public Domain Mark",
+          "shortName": "Public Domain",
+          "uri": "https://creativecommons.org/publicdomain/mark/1.0/"
+        }
+      }
+    ],
+    "acquisitionInformation": "Donation from J. Lord, 24 Feb 1986",
+    "acknowledgement": null,
+    "museumLocation": null,
+    "archeologyContextNumber": null,
+    "archeologySite": null,
+    "archeologyDescription": null,
+    "archeologyDistinguishingMarks": null,
+    "archeologyActivity": null,
+    "archeologySpecificActivity": null,
+    "archeologyDecoration": null,
+    "archeologyPattern": null,
+    "archeologyColour": null,
+    "archeologyMoulding": null,
+    "archeologyPlacement": null,
+    "archeologyForm": null,
+    "archeologyShape": null,
+    "archeologyManufactureName": null,
+    "archeologyManufactureDate": null,
+    "archeologyTechnique": null,
+    "archeologyProvenance": null,
+    "numismaticsDenomination": null,
+    "numismaticsDateIssued": null,
+    "numismaticsSeries": null,
+    "numismaticsMaterial": null,
+    "numismaticsAxis": null,
+    "numismaticsEdgeDescription": null,
+    "numismaticsObverseDescription": null,
+    "numismaticsReverseDescription": null,
+    "philatelyColour": null,
+    "philatelyDenomination": null,
+    "philatelyImprint": null,
+    "philatelyIssue": null,
+    "philatelyDateIssued": null,
+    "philatelyForm": null,
+    "philatelyOverprint": null,
+    "philatelyGibbonsNumber": null,
+    "isdFormat": "Photograph, Black & White",
+    "isdLanguage": null,
+    "isdDescriptionOfContent": "Two Egyptian children stand in the street against a column which has a ripped poster with Egyptian script on it. The children are dressed in long (adult?), dirty clothing, white sun hats, and have bare feet. They both wear small purses slung over their torsos.They hold shoe cleaning equipment in their left hands. The shadows of two figures lie on the ground to the children's left (right of the picture).",
+    "isdPeopleDepicted": null,
+    "audioVisualRecordingDetails": null,
+    "audioVisualContentSummaries": [],
+    "tradeLiteratureNumberofPages": null,
+    "tradeLiteraturePageSizeFormat": null,
+    "tradeLiteratureCoverTitle": null,
+    "tradeLiteraturePrimarySubject": null,
+    "tradeLiteraturePublicationDate": null,
+    "tradeLiteratureIllustrationTypes": null,
+    "tradeLiteraturePrintingTypes": null,
+    "tradeLiteraturePublicationTypes": [],
+    "tradeLiteraturePrimaryRole": null,
+    "tradeLiteraturePrimaryName": null,
+    "indigenousCulturesLocalities": [],
+    "indigenousCulturesCulturalGroups": [],
+    "indigenousCulturesMedium": null,
+    "indigenousCulturesDescription": null,
+    "indigenousCulturesLocalName": null,
+    "indigenousCulturesPhotographer": null,
+    "indigenousCulturesAuthor": null,
+    "indigenousCulturesIllustrator": null,
+    "indigenousCulturesMaker": null,
+    "indigenousCulturesDate": null,
+    "indigenousCulturesCollector": null,
+    "indigenousCulturesDateCollected": null,
+    "indigenousCulturesIndividualsIdentified": null,
+    "indigenousCulturesTitle": null,
+    "indigenousCulturesSheets": null,
+    "indigenousCulturesPages": null,
+    "indigenousCulturesLetterTo": null,
+    "indigenousCulturesLetterFrom": null,
+    "artworkMedium": null,
+    "artworkTechnique": null,
+    "artworkSupport": null,
+    "artworkPlateNumber": null,
+    "artworkDrawingNumber": null,
+    "artworkState": null,
+    "artworkPublisher": null,
+    "artworkPrimaryInscriptions": null,
+    "artworkSecondaryInscriptions": null,
+    "artworkTertiaryInscriptions": null,
+    "typeStatus": null,
+    "identifiedBy": null,
+    "dateIdentified": null,
+    "qualifier": null,
+    "qualifierRank": "None",
+    "taxonomy": null,
+    "id": "items/1699557"
+  }
+]
