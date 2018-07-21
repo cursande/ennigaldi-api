@@ -135,6 +135,7 @@ GEM
     jaro_winkler (1.5.1)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     nokogiri (1.8.4)
@@ -145,6 +146,12 @@ GEM
       ast (~> 2.4.0)
     pg (1.0.0)
     powerpack (0.1.2)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-stack_explorer (0.4.9.2)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
     public_suffix (3.0.2)
     rack (2.0.5)
     rack-protection (2.0.3)
@@ -238,6 +245,8 @@ DEPENDENCIES
   httplog
   oj
   pg
+  pry
+  pry-stack_explorer
   rake
   redis
   redis-namespace

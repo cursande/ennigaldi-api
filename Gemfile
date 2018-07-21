@@ -21,6 +21,10 @@ gem 'sidekiq'
 gem 'redis'
 gem 'redis-namespace'
 
+# console
+gem 'pry'
+gem 'pry-stack_explorer'
+
 group :development do
   gem 'hanami-webconsole'
   gem 'rubocop', require: false
