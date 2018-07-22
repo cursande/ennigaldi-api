@@ -2,20 +2,20 @@
 
 class Web::MVService
   class ServiceError < StandardError; end
-  attr_reader :page
 
-  def initialize(page = 1, per_page = nil)
-    @page = page
+  def initialize(page = nil, per_page = nil)
+    @page &&= page
     @per_page &&= per_page
   end
 
   def request(params)
-    response = HTTP.get(root_uri + per_page + page + params)
+    response = HTTP.get(root_uri + params + per_page + page)
     raise ServiceError unless response.code == 200
     Oj.load(response.to_s)
   end
 
   def search(queries)
+    raise ServiceError, 'No search queries provided' if queries.empty?
     request('/search?' + queries.map { |query| "query=#{query}" }.join('&'))
   end
 
@@ -26,7 +26,7 @@ class Web::MVService
   end
 
   def page
-    "&page=#{page}"
+    @page ? "&page=#{@page}" : ''
   end
 
   def per_page
