@@ -10,7 +10,7 @@ class Web::MVService
 
   def request(params)
     response = HTTP.get(root_uri + params + per_page + page)
-    raise ServiceError unless response.code == 200
+    raise ServiceError, 'Could not fetch data from MV' unless response.code == 200
     Oj.load(response.to_s)
   end
 
