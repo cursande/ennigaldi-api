@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'webmock/rspec'
 
 # Require this file for unit tests
