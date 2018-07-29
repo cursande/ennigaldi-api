@@ -1,9 +1,13 @@
-RSpec.describe Web::Controllers::Articles::Index, type: :action do
+RSpec.describe Web::Controllers::Articles::Fetch, type: :action do
   let(:action) { described_class.new }
-  let(:params) { Hash[] }
+  let(:params) do
+    {
+      article_count: 10,
 
-  it 'is successful' do
-    response = action.call(params)
-    expect(response[0]).to eq 200
+    }
+  end
+
+  describe '#call' do
+
   end
 end
