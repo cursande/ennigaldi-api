@@ -3,12 +3,11 @@
 class Web::MVService
   class ServiceError < StandardError; end
 
-  def initialize(page = nil, per_page = nil)
-    @page &&= page
+  def initialize(per_page = nil)
     @per_page &&= per_page
   end
 
-  def request(params)
+  def request(params, page)
     response = HTTP.get(root_uri + params + per_page + page)
     raise ServiceError, 'Could not fetch data from MV' unless response.code == 200
     Oj.load(response.to_s)
