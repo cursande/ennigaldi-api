@@ -7,7 +7,7 @@ class Web::MVService
     @per_page &&= per_page
   end
 
-  def request(params, page)
+  def request(params, page = nil)
     response = HTTP.get(root_uri + params + per_page + page)
     raise ServiceError, 'Could not fetch data from MV' unless response.code == 200
     Oj.load(response.to_s)
