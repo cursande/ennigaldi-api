@@ -16,13 +16,7 @@ module Web::Controllers::Articles
         articles.each do |article|
           break if total_fetched >= fetch_total
           # TODO How to make good use of related articles?
-          new_article = {
-            title: new_article.fetch('objectName'),
-            description: new_article.fetch('objectSummary'),
-            significance: new_article.fetch('significance'),
-            image: 'TBC'
-          }
-          ArticleRepository.new(new_article)
+          ArticleRepository.new(attributes(article))
         end
        current_page += 1
       end
@@ -32,7 +26,17 @@ module Web::Controllers::Articles
     private
 
     def service
-      @service ||= MVService.new(per_page)
+      @service ||= Web::MVService.new(per_page)
+    end
+
+    def attributes(article)
+      {
+        title: article.fetch('objectName'),
+        description: article.fetch('objectSummary'),
+        significance: article.fetch('significance'),
+        # TODO will be multiple associated images
+        images: 'TBC'
+      }
     end
   end
 end
