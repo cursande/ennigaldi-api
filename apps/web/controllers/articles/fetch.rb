@@ -15,13 +15,12 @@ module Web::Controllers::Articles
         articles = service.request('/articles', current_page)
         articles.each do |article|
           break if total_fetched >= fetch_total
-          # TODO How to make good use of related articles?
           ArticleRepository.new(attributes(article))
+          process_images(article)
         end
        current_page += 1
       end
     end
-
 
     private
 
@@ -33,10 +32,19 @@ module Web::Controllers::Articles
       {
         title: article.fetch('objectName'),
         description: article.fetch('objectSummary'),
-        significance: article.fetch('significance'),
-        # TODO will be multiple associated images
-        images: 'TBC'
+        category: article.fetch('category'),
+        significance: article.fetch('significance')
       }
+    end
+
+    def process_images(article)
+      images = article.fetch('media').select { |m| m['type'] == 'image' }
+      images.each { |i| ImageRepository.new(article, uri(i)) }
+    end
+
+    # default to medium for now
+    def uri(image)
+      image.dig('medium, uri')
     end
   end
 end
