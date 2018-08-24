@@ -2,7 +2,7 @@ Hanami::Model.migration do
   change do
     create_table :images do
       primary_key :id
-      foreign_key :article_id, :articles, null: false, unique: true
+      foreign_key :article_id, :articles, on_delete: :cascade, null: false
 
       column :uri, String
 
