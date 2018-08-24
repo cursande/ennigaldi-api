@@ -7,8 +7,8 @@ class Web::MVService
     @per_page &&= per_page
   end
 
-  def request(params, page = nil)
-    response = HTTP.get(root_uri + params + per_page + page)
+  def request(params = '', page = nil)
+    response = HTTP.get(root_uri + params + per_page + page(page))
     raise ServiceError, 'Could not fetch data from MV' unless response.code == 200
     Oj.load(response.to_s)
   end
@@ -24,8 +24,8 @@ class Web::MVService
     @root_uri ||= 'https://collections.museumvictoria.com.au/api'
   end
 
-  def page
-    @page ? "&page=#{@page}" : ''
+  def page(page)
+    page ? "&page=#{page}" : ''
   end
 
   def per_page
