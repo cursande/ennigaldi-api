@@ -22,7 +22,7 @@ class ArticleRepository < Hanami::Repository
 
   def process_images(article, new_article)
     images = article.fetch('media').select { |m| m['type'] == 'image' }
-    images.each { |i| new_article.images.create(uri(i)) }
+    images.each { |i| add_image(new_article, uri(i)) }
   end
 
   def types(article)
@@ -36,8 +36,12 @@ class ArticleRepository < Hanami::Repository
       .join(', ')
   end
 
+  def add_image(article, image_uri)
+    assoc(:images, article).add(uri: image_uri)
+  end
+
   # default to medium for now
   def uri(image)
-    image.dig('medium, uri')
+    image.dig('medium', 'uri')
   end
 end
