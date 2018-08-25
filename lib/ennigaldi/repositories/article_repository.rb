@@ -1,4 +1,7 @@
 class ArticleRepository < Hanami::Repository
+  associations do
+    has_many :images
+  end
 
   def create_with_images(article)
     new_article = self.class.new.create(attributes(article))
