@@ -13,6 +13,7 @@ class Web::MVService
     Oj.load(response.to_s)
   end
 
+  # TODO: should non-article items just be ignored?
   def search(queries)
     raise ServiceError, 'No search queries provided' if queries.empty?
     request('/search?' + queries.map { |query| "query=#{query}" }.join('&'))
