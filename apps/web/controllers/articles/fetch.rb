@@ -32,23 +32,5 @@ module Web::Controllers::Articles
       @service ||= Web::MVService.new(per_page)
     end
 
-    def attributes(article)
-      {
-        title: article.fetch('objectName'),
-        description: article.fetch('objectSummary'),
-        category: article.fetch('category'),
-        significance: article.fetch('significance')
-      }
-    end
-
-    def process_images(article)
-      images = article.fetch('media').select { |m| m['type'] == 'image' }
-      images.each { |i| ImageRepository.new(article, uri(i)) }
-    end
-
-    # default to medium for now
-    def uri(image)
-      image.dig('medium, uri')
-    end
   end
 end
