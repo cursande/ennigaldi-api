@@ -25,7 +25,7 @@ RSpec.describe Web::MVService do
       let(:queries) { [] }
 
       it 'raises a service error, as no queries have been provided' do
-        expect{ subject.search(queries) }.to raise_error(Web::MVService::ServiceError, 'No search queries provided')
+        expect { subject.search(queries) }.to raise_error(Web::MVService::ServiceError, 'No search queries provided')
       end
     end
   end

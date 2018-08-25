@@ -12,10 +12,11 @@ RSpec.describe ArticleRepository, type: :repository do
       expect(article_repository.all.length).to eql(1)
       expect(image_repository.all.length).to eql(1)
 
-      article = article_repository.last
+      article = article_repository.find_with_images(article_repository.last.id)
 
       expect(article.title).to eql('The Battle of the Somme, 1916')
       expect(article.authors).to eql('Nina K. Buchan')
+      expect(article.images.last.uri).to eql('https://collections.museumvictoria.com.au/content/media/27/717727-medium.jpg')
     end
   end
 end

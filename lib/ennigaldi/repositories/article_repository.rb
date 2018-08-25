@@ -4,8 +4,12 @@ class ArticleRepository < Hanami::Repository
   end
 
   def create_with_images(article)
-    new_article = self.create(attributes(article))
+    new_article = create(attributes(article))
     process_images(article, new_article)
+  end
+
+  def find_with_images(id)
+    aggregate(:images).where(id: id).map_to(Article).one
   end
 
   private
@@ -36,6 +40,8 @@ class ArticleRepository < Hanami::Repository
       .join(', ')
   end
 
+  # TODO: For now it saves the url from the source, but in future it should
+  # be saving the url for the image on S3
   def add_image(article, image_uri)
     assoc(:images, article).add(uri: image_uri)
   end

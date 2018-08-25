@@ -31,6 +31,5 @@ module Web::Controllers::Articles
     def service
       @service ||= Web::MVService.new(per_page)
     end
-
   end
 end
