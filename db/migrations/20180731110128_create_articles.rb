@@ -4,9 +4,9 @@ Hanami::Model.migration do
       primary_key :id
 
       column :title, String, null: false
-      column :description, "text[]"
-      column :category, String
-      column :significance, "text[]"
+      column :content, "text[]"
+      column :content_summary, "text[]"
+      column :types, String
       column :authors, String
 
       column :created_at, DateTime, null: false
