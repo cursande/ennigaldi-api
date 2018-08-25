@@ -22,7 +22,7 @@ module Web::Controllers::Articles
         articles = service.request('/articles', current_page)
         articles.each do |article|
           break if total_fetched >= fetch_total
-          ArticleRepository.create_with_images(article)
+          ArticleRepository.new.create_with_images(article)
         end
         current_page += 1
       end
