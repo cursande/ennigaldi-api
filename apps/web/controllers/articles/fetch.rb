@@ -6,7 +6,8 @@ module Web::Controllers::Articles
 
     def call(params)
       # For now, will make a direct request to external endpoints,
-      # rather than sending it through the worker
+      # rather than sending it through the worker. Eventually we'll want
+      # to split pages up between threads
       fetch_total = params[:fetch_total]
       page_total = (fetch_total.to_f / params[:per_page]).ceil
       collect_articles(fetch_total, page_total)
@@ -18,11 +19,12 @@ module Web::Controllers::Articles
       current_page = 1
       total_fetched = 0
 
-      until current_page >= page_total
+      while current_page <= page_total
         articles = service.request('/articles', current_page)
         articles.each do |article|
           break if total_fetched >= fetch_total
-          ArticleRepository.new.create_with_images(article)
+          repository.create_with_images(article)
+          total_fetched += 1
         end
         current_page += 1
       end
@@ -30,6 +32,10 @@ module Web::Controllers::Articles
 
     def service
       @service ||= Web::MVService.new(per_page)
+    end
+
+    def repository
+      @repository ||= ArticleRepository.new
     end
   end
 end
