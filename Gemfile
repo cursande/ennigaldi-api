@@ -27,6 +27,12 @@ gem 'redis-namespace'
 gem 'pry'
 gem 'pry-stack_explorer'
 
+# image uploading
+gem "shrine", "~> 2.0"
+
+# Storage
+gem "aws-sdk"
+
 group :development do
   gem 'hanami-webconsole'
   gem 'rubocop', require: false
