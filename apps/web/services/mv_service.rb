@@ -3,12 +3,14 @@
 class Web::MVService
   class ServiceError < StandardError; end
 
-  def initialize(per_page = nil)
-    @per_page &&= per_page
+  ROOT_URI = 'https://collections.museumvictoria.com.au/api'
+
+  def initialize
+    @per_page = ENV['ITEMS_PER_PAGE']
   end
 
   def request(params = '', page = nil)
-    response = HTTP.get(root_uri + params + per_page + page(page))
+    response = HTTP.get(ROOT_URI + params + per_page + page(page))
     raise ServiceError, 'Could not fetch data from MV' unless response.code == 200
     Oj.load(response.to_s)
   end
@@ -20,10 +22,6 @@ class Web::MVService
   end
 
   private
-
-  def root_uri
-    @root_uri ||= 'https://collections.museumvictoria.com.au/api'
-  end
 
   def page(page)
     page ? "&page=#{page}" : ''
