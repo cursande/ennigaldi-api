@@ -48,6 +48,7 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec'
   gem 'webmock'
+  gem 'shrine-memory'
 end
 
 group :production do
