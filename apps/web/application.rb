@@ -24,6 +24,7 @@ module Web
         controllers
         views
         services
+        uploaders
       ]
 
       # Handle exceptions with HTTP statuses (true) or don't catch them (false).
