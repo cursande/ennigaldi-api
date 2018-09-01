@@ -5,6 +5,7 @@ Hanami::Model.migration do
       foreign_key :article_id, :articles, on_delete: :cascade, null: false
 
       column :uri, String
+      column :image_data, "text"
 
       column :created_at, DateTime, null: false
       column :updated_at, DateTime, null: false
