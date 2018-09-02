@@ -1,0 +1,397 @@
+[
+    {
+        "recordType": "article",
+        "licence": {
+            "name": "Attribution 4.0 International",
+            "shortName": "CC BY",
+            "uri": "https://creativecommons.org/licenses/by/4.0"
+        },
+        "dateModified": "2016-11-06T22:48:00Z",
+        "title": "British & Australian Air Forces in the Middle East, World War I, 1914-1918",
+        "displayTitle": "British & Australian Air Forces in the Middle East, World War I, 1914-1918",
+        "keywords": [
+            "World War I, 1914-1918"
+        ],
+        "localities": [
+            "Australia",
+            "United Kingdom",
+            "Egypt"
+        ],
+        "content": "<p>The British Royal Flying Corps (RFC), the forerunner of the Royal Air Force (RAF), was initially created in 1912 as a means of observation for the British military and it was primarily for reconnaissance that they were deployed during the war. </p>\n<p>The Australian Flying Corps (AFC), the forerunner of the Royal Australian Air Force (RAAF), was formed two years later in 1914 at Point Cook and was affiliated with the Australian Imperial Force (AIF). Following the outbreak of World War I, however, the Australian Flying Corps primarily flew under the operational control of the Royal Flying Corps. </p>\n<p>No. 1 Australian Squadron, which left for the Middle East in March 1916, was duly renamed 67th Squadron RFC in September 1916 by the Royal Flying Corps and retained this designation until February 1918. Although the records kept by the squadron retain their Australian designation of No. 1 Australian Squadron. On 1 April 1918 the RFC became the RAF.</p>\n<p>Other British squadrons, including No. 14, No. 17, No. 111, No. 144 &amp; No.145 were deployed in the Middle East forming the Palestine Brigade. No. 17 was later transferred to Salonika. No. 14 Squadron continued to fly reconnaissance and ground attack sorties along with No. 1 Australian Squadron, until the end of the war when both squadrons were disbanded.</p>\n<p>The Australian Flying Corps and the Royal Flying Corps had many more squadrons active on the Western Front in France.<br></p>",
+        "contentSummary": null,
+        "types": [
+            "Historical Narrative"
+        ],
+        "authors": [
+            {
+                "firstName": "Elizabeth",
+                "lastName": "Bramley",
+                "fullName": "Elizabeth Bramley",
+                "biography": null,
+                "profileImage": null
+            }
+        ],
+        "contributors": [],
+        "media": [
+            {
+                "type": "image",
+                "alternativeText": null,
+                "large": {
+                    "width": 1247,
+                    "height": 969,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/10/501510-large.jpg",
+                    "size": 101372
+                },
+                "medium": {
+                    "width": 1247,
+                    "height": 969,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/10/501510-medium.jpg",
+                    "size": 85767
+                },
+                "small": {
+                    "width": 643,
+                    "height": 500,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/10/501510-small.jpg",
+                    "size": 26727
+                },
+                "thumbnail": {
+                    "width": 250,
+                    "height": 250,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/10/501510-thumbnail.jpg",
+                    "size": 5058
+                },
+                "dateModified": "2016-11-09T23:35:00Z",
+                "caption": "Photograph - Bristol F2B Fighter, Middle East, World War I, circa 1918",
+                "creators": [],
+                "sources": [
+                    "Museums Victoria"
+                ],
+                "credit": null,
+                "rightsStatement": "Public Domain",
+                "licence": {
+                    "name": "Public Domain Mark",
+                    "shortName": "Public Domain",
+                    "uri": "http://creativecommons.org/publicdomain/mark/1.0/"
+                }
+            }
+        ],
+        "yearWritten": "2011",
+        "parentArticleId": null,
+        "childArticleIds": [],
+        "relatedArticleIds": [],
+        "relatedItemIds": [
+            "items/384226",
+            "items/384220",
+            "items/1740817",
+            "items/1740735",
+            "items/1740814",
+            "items/1740815",
+            "items/1740736",
+            "items/1740808",
+            "items/1740793",
+            "items/1740774",
+            "items/1740733",
+            "items/1731433",
+            "items/1740791",
+            "items/1740785",
+            "items/1740781",
+            "items/1740816",
+            "items/1740787",
+            "items/1740810",
+            "items/1740811",
+            "items/1740777",
+            "items/1740809",
+            "items/1740807",
+            "items/1740779",
+            "items/1740812",
+            "items/1740813",
+            "items/1740819",
+            "items/1751358",
+            "items/1751365",
+            "items/1751364",
+            "items/1751351",
+            "items/1751361",
+            "items/384226",
+            "items/384220",
+            "items/1740817",
+            "items/1751376",
+            "items/1751357",
+            "items/1740735",
+            "items/1751354",
+            "items/1751377",
+            "items/1751385",
+            "items/1751380",
+            "items/1751379",
+            "items/1751382",
+            "items/1751383",
+            "items/1751375",
+            "items/1751386",
+            "items/1751340",
+            "items/1751342",
+            "items/1751373",
+            "items/1751369",
+            "items/1740814",
+            "items/1751352",
+            "items/1740815",
+            "items/1740736",
+            "items/1751353",
+            "items/1740808",
+            "items/1740793",
+            "items/1740774",
+            "items/1751350",
+            "items/1751362",
+            "items/1751372",
+            "items/1751345",
+            "items/1740733",
+            "items/1731433",
+            "items/1740791",
+            "items/1740785",
+            "items/1731434",
+            "items/1751359",
+            "items/1740781",
+            "items/1740816",
+            "items/1740787",
+            "items/1740810",
+            "items/1740811",
+            "items/1751381",
+            "items/1740777",
+            "items/1740809",
+            "items/1740807",
+            "items/1751348",
+            "items/1740779",
+            "items/1751346",
+            "items/1740812",
+            "items/1740813",
+            "items/1740819",
+            "items/1751366"
+        ],
+        "relatedSpecimenIds": [],
+        "id": "articles/11148"
+    },
+    {
+        "recordType": "article",
+        "licence": {
+            "name": "Attribution 4.0 International",
+            "shortName": "CC BY",
+            "uri": "https://creativecommons.org/licenses/by/4.0"
+        },
+        "dateModified": "2016-11-06T22:48:00Z",
+        "title": "Letter, Dudley Townley to Freda Gwyn, Enroute to Australia, 22 May 1919",
+        "displayTitle": "Letter, Dudley Townley to Freda Gwyn, Enroute to Australia, 22 May 1919",
+        "keywords": [
+            "World War I",
+            "Australians at war"
+        ],
+        "localities": [
+            "Australia"
+        ],
+        "content": "content"
+        "contentSummary": null,
+        "types": [
+            "Historic Text"
+        ],
+        "authors": [
+            {
+                "firstName": "Elizabeth",
+                "lastName": "Bramley",
+                "fullName": "Elizabeth Bramley",
+                "biography": null,
+                "profileImage": null
+            }
+        ],
+        "contributors": [],
+        "media": [
+            {
+                "type": "image",
+                "alternativeText": null,
+                "large": {
+                    "width": 800,
+                    "height": 1183,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/39/196039-large.jpg",
+                    "size": 197412
+                },
+                "medium": {
+                    "width": 800,
+                    "height": 1183,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/39/196039-medium.jpg",
+                    "size": 172062
+                },
+                "small": {
+                    "width": 338,
+                    "height": 500,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/39/196039-small.jpg",
+                    "size": 48495
+                },
+                "thumbnail": {
+                    "width": 250,
+                    "height": 250,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/39/196039-thumbnail.jpg",
+                    "size": 20289
+                },
+                "dateModified": "2015-08-12T05:09:00Z",
+                "caption": "\"Y.M.C.A. with the A.I.F.\" \"My dearest Freda\" \"S.S. Ypiranga, 22nd May 1919.\"",
+                "creators": [],
+                "sources": [],
+                "credit": null,
+                "rightsStatement": "In Copyright / All Rights Reserved",
+                "licence": {
+                    "name": "All Rights Reserved",
+                    "shortName": "All Rights Reserved",
+                    "uri": ""
+                }
+            }
+        ],
+        "yearWritten": "1919",
+        "parentArticleId": null,
+        "childArticleIds": [],
+        "relatedArticleIds": [],
+        "relatedItemIds": [
+            "items/376393"
+        ],
+        "relatedSpecimenIds": [],
+        "id": "articles/13451"
+    },
+    {
+        "recordType": "article",
+        "licence": {
+            "name": "Attribution 4.0 International",
+            "shortName": "CC BY",
+            "uri": "https://creativecommons.org/licenses/by/4.0"
+        },
+        "dateModified": "2016-11-06T22:48:00Z",
+        "title": "Trooper George Simpson Millar, AIF (1892-1973)",
+        "displayTitle": "Trooper George Simpson Millar, AIF (1892-1973)",
+        "keywords": [
+            "World War I"
+        ],
+        "localities": [
+            "Egypt",
+            "Gallipoli Peninsula, Turkey",
+            "France",
+            "England, Great Britain",
+            "Australia"
+        ],
+        "content": "<p>more content</p>"
+        "contentSummary": null,
+        "types": [
+            "Collection",
+            "Party"
+        ],
+        "authors": [
+            {
+                "firstName": "Elizabeth",
+                "lastName": "Bramley",
+                "fullName": "Elizabeth Bramley",
+                "biography": null,
+                "profileImage": null
+            },
+            {
+                "firstName": "Lars",
+                "lastName": "Alvik",
+                "fullName": "Mr Lars J. Alvik",
+                "biography": null,
+                "profileImage": null
+            }
+        ],
+        "contributors": [],
+        "media": [
+            {
+                "type": "image",
+                "alternativeText": null,
+                "large": {
+                    "width": 1443,
+                    "height": 2000,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/26/382176-large.jpg",
+                    "size": 211871
+                },
+                "medium": {
+                    "width": 1082,
+                    "height": 1500,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/26/382176-medium.jpg",
+                    "size": 145909
+                },
+                "small": {
+                    "width": 361,
+                    "height": 500,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/26/382176-small.jpg",
+                    "size": 21720
+                },
+                "thumbnail": {
+                    "width": 250,
+                    "height": 250,
+                    "uri": "https://collections.museumvictoria.com.au/content/media/26/382176-thumbnail.jpg",
+                    "size": 9674
+                },
+                "dateModified": "2016-05-02T00:21:00Z",
+                "caption": "Album - Photographs",
+                "creators": [],
+                "sources": [],
+                "credit": null,
+                "rightsStatement": "Public Domain",
+                "licence": {
+                    "name": "Public Domain Mark",
+                    "shortName": "Public Domain",
+                    "uri": "http://creativecommons.org/publicdomain/mark/1.0/"
+                }
+            }
+        ],
+        "yearWritten": null,
+        "parentArticleId": null,
+        "childArticleIds": [],
+        "relatedArticleIds": [],
+        "relatedItemIds": [
+            "items/407600",
+            "items/803237",
+            "items/803226",
+            "items/803233",
+            "items/803279",
+            "items/803285",
+            "items/803283",
+            "items/803199",
+            "items/803195",
+            "items/803254",
+            "items/803256",
+            "items/803203",
+            "items/803201",
+            "items/803258",
+            "items/803207",
+            "items/803241",
+            "items/803191",
+            "items/803211",
+            "items/803213",
+            "items/803197",
+            "items/803239",
+            "items/803205",
+            "items/803193",
+            "items/1564938",
+            "items/1565023",
+            "items/1565037",
+            "items/1565050",
+            "items/1565061",
+            "items/1565069",
+            "items/1565005",
+            "items/803224",
+            "items/803215",
+            "items/803245",
+            "items/803287",
+            "items/803217",
+            "items/803221",
+            "items/803219",
+            "items/803247",
+            "items/803235",
+            "items/1565079",
+            "items/1565081",
+            "items/1565056",
+            "items/1565014",
+            "items/803231",
+            "items/803243",
+            "items/803209",
+            "items/803281",
+            "items/803228",
+            "items/1565064",
+            "items/747454"
+        ],
+        "relatedSpecimenIds": [],
+        "id": "articles/4672"
+    }
+]
