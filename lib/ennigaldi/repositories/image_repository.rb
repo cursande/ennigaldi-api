@@ -1,5 +1,7 @@
+require_relative '../../../apps/web/uploaders/image_uploader'
+
 class ImageRepository < Hanami::Repository
-  include ImageUploader::Attachment.new(:image)
+  prepend ImageUploader.repository(:image_data)
 
   associations do
     belongs_to :article
