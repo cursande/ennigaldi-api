@@ -696,6 +696,10 @@ GEM
       hanami-utils (~> 1.2)
       http_router (= 0.11.2)
       rack (~> 2.0)
+    hanami-shrine (0.4.0)
+      hanami-model (>= 1.0)
+      hanami-utils (>= 1.0)
+      shrine (>= 2.7.0)
     hanami-utils (1.2.0)
       concurrent-ruby (~> 1.0)
       transproc (~> 1.0)
@@ -840,6 +844,7 @@ DEPENDENCIES
   dotenv (~> 2.0)
   hanami (~> 1.2)
   hanami-model (~> 1.2)
+  hanami-shrine
   hanami-webconsole
   http
   httplog

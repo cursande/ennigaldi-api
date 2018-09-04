@@ -28,10 +28,11 @@ gem 'pry'
 gem 'pry-stack_explorer'
 
 # image uploading
-gem "shrine", "~> 2.0"
+gem 'shrine', '~> 2.0'
+gem 'hanami-shrine'
 
 # Storage
-gem "aws-sdk"
+gem 'aws-sdk'
 
 group :development do
   gem 'hanami-webconsole'
