@@ -4,6 +4,11 @@ RSpec.describe Web::Controllers::Articles::Fetch, type: :action do
   let(:image_repository) { ImageRepository.new }
   let(:params) { Hash[fetch_total: 10] }
 
+  before do
+    article_repository.clear
+    image_repository.clear
+  end
+
   describe '#call' do
     context 'with a page of articles' do
       before { stub_service(:fetch_mv_articles) }

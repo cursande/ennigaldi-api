@@ -6,6 +6,11 @@ RSpec.describe ArticleRepository, type: :repository do
     let(:article_repository) { ArticleRepository.new }
     let(:image_repository) { ImageRepository.new }
 
+    before do
+      article_repository.clear
+      image_repository.clear
+    end
+
     it 'saves an article and its associated images in the db' do
       subject.create_with_images(article_data)
 
@@ -17,6 +22,7 @@ RSpec.describe ArticleRepository, type: :repository do
       expect(article.title).to eql('The Battle of the Somme, 1916')
       expect(article.authors).to eql('Nina K. Buchan')
       expect(article.images.last.uri).to eql('https://collections.museumvictoria.com.au/content/media/27/717727-medium.jpg')
+      expect(article.images.last.image).to_not eql(nil)
     end
   end
 end

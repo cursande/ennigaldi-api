@@ -185,7 +185,7 @@
         "localities": [
             "Australia"
         ],
-        "content": "content"
+        "content": "content",
         "contentSummary": null,
         "types": [
             "Historic Text"
@@ -271,7 +271,7 @@
             "England, Great Britain",
             "Australia"
         ],
-        "content": "<p>more content</p>"
+        "content": "<p>more content</p>",
         "contentSummary": null,
         "types": [
             "Collection",

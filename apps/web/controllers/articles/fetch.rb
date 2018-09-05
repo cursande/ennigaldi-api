@@ -10,7 +10,7 @@ module Web::Controllers::Articles
       # to split pages up between threads.
       fetch_total = params[:fetch_total]
       per_page = ENV['ITEMS_PER_PAGE']
-      page_total = (fetch_total.to_f / per_page).ceil if per_page
+      page_total = (fetch_total.to_f / per_page.to_i).ceil if per_page
       collect_articles(fetch_total, page_total)
     end
 
