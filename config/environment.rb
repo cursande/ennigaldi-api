@@ -4,6 +4,7 @@ require 'bundler/setup'
 require 'hanami/setup'
 require 'hanami/model'
 require_relative '../lib/ennigaldi'
+require_relative 'initializers/shrine'
 require_relative '../apps/web/application'
 
 Hanami.configure do
