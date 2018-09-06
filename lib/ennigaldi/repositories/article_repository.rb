@@ -1,3 +1,5 @@
+require "down"
+
 class ArticleRepository < Hanami::Repository
   associations do
     has_many :images
@@ -29,6 +31,11 @@ class ArticleRepository < Hanami::Repository
     images.each { |i| add_image(new_article, uri(i)) }
   end
 
+  # default to medium for now
+  def uri(image)
+    image.dig('medium', 'uri')
+  end
+
   def types(article)
     article.fetch('types').join(', ')
   end
@@ -40,14 +47,12 @@ class ArticleRepository < Hanami::Repository
       .join(', ')
   end
 
-  # TODO: For now it saves the url from the source, but in future it should
-  # be saving the url for the image on S3
   def add_image(article, image_uri)
-    assoc(:images, article).add(uri: image_uri)
+    uploaded_image = image_uploader.upload(Down.open(image_uri))
+    assoc(:images, article).add(uri: uploaded_image.url, image_data: uploaded_image)
   end
 
-  # default to medium for now
-  def uri(image)
-    image.dig('medium', 'uri')
+  def image_uploader
+    @image_uploader ||= ImageUploader.new(:store)
   end
 end

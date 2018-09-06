@@ -3,7 +3,8 @@
 module WebMockHelpers
   SERVICES_MAP = {
     mv_search: { url: %r{https://collections.museumvictoria.com.au/api/search.*} },
-    fetch_mv_articles: { url: %r{https://collections.museumvictoria.com.au/api/articles} }
+    fetch_mv_articles: { url: %r{https://collections.museumvictoria.com.au/api/articles} },
+    fetch_mv_image: { url: %r{https://collections.museumvictoria.com.au/content/media/.*\.jpg} }
   }.freeze
 
   def stub_service(service_name, status: 200, method: nil, with: {}, response_headers: {}, response_body: nil, response_fixture: nil, to_raise: nil)

@@ -11,7 +11,13 @@ RSpec.describe Web::Controllers::Articles::Fetch, type: :action do
 
   describe '#call' do
     context 'with a page of articles' do
-      before { stub_service(:fetch_mv_articles) }
+      before do
+        stub_service(:fetch_mv_articles)
+        stub_service(
+          :fetch_mv_image,
+          response_body: IO.read('spec/web/media/test_image.jpg', 1)
+        )
+      end
 
       it 'saves the specified number of articles' do
         action.call(params)
