@@ -49,7 +49,7 @@ class ArticleRepository < Hanami::Repository
 
   def add_image(article, image_uri)
     uploaded_image = image_uploader.upload(Down.open(image_uri))
-    assoc(:images, article).add(uri: uploaded_image.url, image_data: uploaded_image)
+    assoc(:images, article).add(uri: uploaded_image.url)
   end
 
   def image_uploader
