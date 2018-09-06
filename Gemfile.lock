@@ -858,7 +858,7 @@ DEPENDENCIES
   rspec
   rubocop
   shotgun
-  shrine (~> 2.0)
+  shrine
   shrine-memory
   sidekiq
   webmock

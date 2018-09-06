@@ -28,7 +28,7 @@ gem 'pry'
 gem 'pry-stack_explorer'
 
 # image uploading
-gem 'shrine', '~> 2.0'
+gem 'shrine'
 gem 'hanami-shrine'
 
 # Storage
