@@ -34,6 +34,9 @@ gem 'hanami-shrine'
 # Storage
 gem 'aws-sdk'
 
+# query language
+gem 'graphql'
+
 group :development do
   gem 'hanami-webconsole'
   gem 'rubocop', require: false
