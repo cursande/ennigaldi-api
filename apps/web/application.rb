@@ -13,6 +13,7 @@ module Web
         views
         services
         uploaders
+        queries
       ]
 
       # Handle exceptions with HTTP statuses (true) or don't catch them (false).
