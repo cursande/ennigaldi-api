@@ -26,7 +26,7 @@ RSpec.describe ArticleRepository, type: :repository do
 
       expect(article.title).to eql('The Battle of the Somme, 1916')
       expect(article.authors).to eql('Nina K. Buchan')
-      expect(article.images.last.uri).to include("memory://")
+      expect(article.images.last.uri).to include('memory://')
     end
   end
 end

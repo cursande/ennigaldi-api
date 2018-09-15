@@ -1,4 +1,4 @@
-require "shrine"
+require 'shrine'
 
 if ENV['HANAMI_ENV'] == 'test'
   require 'shrine/storage/memory'
@@ -8,7 +8,7 @@ if ENV['HANAMI_ENV'] == 'test'
     store: Shrine::Storage::Memory.new
   }
 else
-  require "shrine/storage/s3"
+  require 'shrine/storage/s3'
 
   s3_options = {
     bucket: ENV.fetch('S3_BUCKET'),
@@ -18,12 +18,11 @@ else
   }
 
   Shrine.storages = {
-    cache: Shrine::Storage::S3.new(prefix: "cache", **s3_options),
-    store: Shrine::Storage::S3.new(**s3_options),
+    cache: Shrine::Storage::S3.new(prefix: 'cache', **s3_options),
+    store: Shrine::Storage::S3.new(**s3_options)
   }
 
 end
-
 
 Shrine.plugin :rack_file
 Shrine.plugin :logging

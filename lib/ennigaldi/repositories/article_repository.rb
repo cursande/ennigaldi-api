@@ -1,4 +1,4 @@
-require "down"
+require 'down'
 
 class ArticleRepository < Hanami::Repository
   associations do
