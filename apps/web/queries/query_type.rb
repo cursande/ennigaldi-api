@@ -1,13 +1,26 @@
 class QueryType < GraphQL::Schema::Object
   description "The query root of this schema"
 
-  field :article, ArticleType, null: true do
-    description "Find a article by ID"
-    argument :id, ID, required: false
+  field :articles, ArticleType, null: true do
+    description "Find all articles"
   end
 
-  # Then provide an implementation:
+  field :article, ArticleType, null: true do
+    description "Find a article by ID"
+    argument :id, ID, required: true
+  end
+
+  def articles
+    article_repo.all
+  end
+
   def article(id:)
-    Article.find(id)
+    article_repo.find_with_images(id)
+  end
+
+  private
+
+  def article_repo
+    @article_repo ||= ArticleRepository.new
   end
 end
