@@ -1,7 +1,7 @@
 class QueryType < GraphQL::Schema::Object
   description 'The query root of this schema'
 
-  field :articles, ArticleType, null: true do
+  field :articles, [ArticleType], null: true do
     description 'Find all articles'
   end
 
