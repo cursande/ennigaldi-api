@@ -11,9 +11,8 @@ RSpec.describe EnnigaldiSchema do
     res
   }
 
-  # TODO: Pull this into a spec helper
   let(:repository) { ArticleRepository.new }
-  before { repository.clear }
+
   before { stub_service(:fetch_mv_image, response_body: IO.read('spec/web/media/test_image.jpg', 1)) }
   before { repository.create_with_images(Oj.load(File.read('spec/web/fixtures/services/mv_article'))) }
 

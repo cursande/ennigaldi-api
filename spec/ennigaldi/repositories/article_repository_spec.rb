@@ -6,11 +6,6 @@ RSpec.describe ArticleRepository, type: :repository do
     let(:article_repository) { ArticleRepository.new }
     let(:image_repository) { ImageRepository.new }
 
-    before do
-      article_repository.clear
-      image_repository.clear
-    end
-
     it 'saves an article and its associated images in the db' do
       stub_service(
         :fetch_mv_image,
