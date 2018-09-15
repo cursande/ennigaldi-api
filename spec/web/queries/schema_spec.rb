@@ -20,7 +20,7 @@ RSpec.describe Schema do
     let(:article) { repository.last }
     let(:query_string) { %|{ article(id: #{article.id}) { title } }| }
 
-    it 'returns the titles of each article' do
+    it 'returns the title of the article' do
       expect(result.to_h['data']['article']['title']).to eq(article.title)
     end
   end
@@ -28,7 +28,7 @@ RSpec.describe Schema do
   describe 'article(with no id provided)' do
     let(:query_string) { %({ article { title } }) }
 
-    it 'returns the titles of each article' do
+    it 'returns an error stating that id is missing' do
       expect(result.to_h['errors'].first['message']).to include("Field 'article' is missing required arguments: id")
     end
   end
