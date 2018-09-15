@@ -1,3 +1,3 @@
-class Schema < GraphQL::Schema
+class EnnigaldiSchema < GraphQL::Schema
   query QueryType
 end

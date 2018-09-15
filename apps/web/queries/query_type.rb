@@ -6,7 +6,7 @@ class QueryType < GraphQL::Schema::Object
   end
 
   field :article, ArticleType, null: true do
-    description 'Find a article by ID'
+    description 'Find an article by ID'
     argument :id, ID, required: true
   end
 
