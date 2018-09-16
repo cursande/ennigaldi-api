@@ -6,7 +6,7 @@ class Web::MVService
   ROOT_URI = 'https://collections.museumvictoria.com.au/api'
 
   def initialize
-    @per_page = ENV['ITEMS_PER_PAGE']
+    @per_page = ENV.fetch('ITEMS_PER_PAGE')
   end
 
   def request(params = '', page = nil)
@@ -28,6 +28,6 @@ class Web::MVService
   end
 
   def per_page
-    @per_page ? "&perpage=#{@per_page}" : ''
+    "&perpage=#{@per_page}"
   end
 end

@@ -13,8 +13,10 @@ RSpec.describe EnnigaldiSchema do
 
   let(:repository) { ArticleRepository.new }
 
-  before { stub_service(:fetch_mv_image, response_body: IO.read('spec/web/media/test_image.jpg', 1)) }
-  before { repository.create_with_images(Oj.load(File.read('spec/web/fixtures/services/mv_article'))) }
+  before do
+    stub_service(:fetch_mv_image, response_body: IO.read('spec/web/media/test_image.jpg', 1))
+    repository.create_with_images(Oj.load(File.read('spec/web/fixtures/services/mv_article')))
+  end
 
   describe 'articles' do
     let(:article) { repository.last }

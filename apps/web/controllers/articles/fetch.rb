@@ -9,8 +9,8 @@ module Web::Controllers::Articles
       # rather than sending it through the worker. Eventually we'll want
       # to split pages up between threads.
       fetch_total = params[:fetch_total]
-      per_page = ENV['ITEMS_PER_PAGE']
-      page_total = (fetch_total.to_f / per_page.to_i).ceil if per_page
+      per_page = ENV.fetch('ITEMS_PER_PAGE')
+      page_total = (fetch_total.to_f / per_page.to_i).ceil
       collect_articles(fetch_total, page_total)
     end
 
