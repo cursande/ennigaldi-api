@@ -30,10 +30,12 @@ RSpec.describe EnnigaldiSchema do
 
   describe 'article(with id provided)' do
     let(:article) { repository.last }
-    let(:query_string) { %|{ article(id: #{article.id}) { title } }| }
+    let(:images) { repository.find_with_images(article.id).images }
+    let(:query_string) { %|{ article(id: #{article.id}) { title images { uri } } }| }
 
-    it 'returns the title of the article' do
+    it 'returns the title and associated images for the article' do
       expect(result.to_h['data']['article']['title']).to eq(article.title)
+      expect(result.to_h['data']['article']['images'].first['uri']).to eq(images.first.uri)
     end
   end
 end
