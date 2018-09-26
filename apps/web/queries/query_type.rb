@@ -11,7 +11,7 @@ class QueryType < GraphQL::Schema::Object
   end
 
   def articles
-    article_repo.all
+    article_repo.all_with_images
   end
 
   def article(id:)

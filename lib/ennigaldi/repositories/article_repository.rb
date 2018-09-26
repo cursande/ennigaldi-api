@@ -10,6 +10,10 @@ class ArticleRepository < Hanami::Repository
     process_images(article, new_article)
   end
 
+  def all_with_images
+    aggregate(:images).map_to(Article).to_a
+  end
+
   def find_with_images(id)
     aggregate(:images).where(id: id).map_to(Article).one
   end
