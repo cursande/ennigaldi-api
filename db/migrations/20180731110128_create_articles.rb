@@ -6,6 +6,7 @@ Hanami::Model.migration do
       # TODO: at some point, may want to actually change these text
       # types back to arrays: could be a more useful way to transport
       # data client-side
+      column :external_id, String, null: false
       column :title, String, null: false
       column :content, "text"
       column :content_summary, "text"
