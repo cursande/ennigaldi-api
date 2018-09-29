@@ -22,7 +22,7 @@ RSpec.describe EnnigaldiSchema do
   let(:images) { repository.find_with_images(article.id).images }
 
   describe 'articles' do
-    let(:query_string) { %|{ articles { id title contentSummary images { uri } } }| }
+    let(:query_string) { %({ articles { id title contentSummary images { uri } } }) }
 
     it 'returns an array of all the articles in the db with the selected fields and associated images' do
       expect(result.to_h['data']['articles'].length).to eq(1)
@@ -32,7 +32,7 @@ RSpec.describe EnnigaldiSchema do
   end
 
   describe 'article(with id provided)' do
-    let(:query_string) { %|{ article(id: #{article.id}) { title images { uri } } }| }
+    let(:query_string) { %({ article(id: #{article.id}) { title images { uri } } }) }
 
     it 'returns the title and associated images for the article' do
       expect(result.to_h['data']['article']['title']).to eq(article.title)

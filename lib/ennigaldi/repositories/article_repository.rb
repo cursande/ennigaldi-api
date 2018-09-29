@@ -5,9 +5,14 @@ class ArticleRepository < Hanami::Repository
     has_many :images
   end
 
-  def create_with_images(article)
-    new_article = create(attributes(article))
-    process_images(article, new_article)
+  def create_with_images(article_data)
+    new_article = create(attributes(article_data))
+    process_images(article_data, new_article)
+  end
+
+  # TODO: define below to work with any attribute instead?
+  def find_by_external_id(id)
+    articles.where(external_id: id).one
   end
 
   def all_with_images
@@ -20,18 +25,19 @@ class ArticleRepository < Hanami::Repository
 
   private
 
-  def attributes(article)
+  def attributes(article_data)
     {
-      title: article.fetch('title'),
-      content: article.fetch('content'),
-      content_summary: article.fetch('contentSummary'),
-      types: types(article),
-      authors: authors(article)
+      external_id: article_data.fetch('id'),
+      title: article_data.fetch('title'),
+      content: article_data.fetch('content'),
+      content_summary: article_data.fetch('contentSummary'),
+      types: types(article_data),
+      authors: authors(article_data)
     }
   end
 
-  def process_images(article, new_article)
-    images = article.fetch('media').select { |m| m['type'] == 'image' }
+  def process_images(article_data, new_article)
+    images = article_data.fetch('media').select { |m| m['type'] == 'image' }
     images.each { |i| add_image(new_article, uri(i)) }
   end
 
@@ -40,12 +46,12 @@ class ArticleRepository < Hanami::Repository
     image.dig('medium', 'uri')
   end
 
-  def types(article)
-    article.fetch('types').join(', ')
+  def types(article_data)
+    article_data.fetch('types').join(', ')
   end
 
-  def authors(article)
-    article
+  def authors(article_data)
+    article_data
       .fetch('authors')
       .map { |a| a['fullName'] }
       .join(', ')
