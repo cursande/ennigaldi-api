@@ -14,6 +14,7 @@ module Web
         services
         uploaders
         queries
+        workers
       ]
 
       # Handle exceptions with HTTP statuses (true) or don't catch them (false).
