@@ -1,9 +1,8 @@
 require 'sidekiq/testing'
-Sidekiq::Testing.inline!
 
 RSpec.describe Web::Controllers::Articles::Fetch, type: :action do
   let(:action) { described_class.new }
-  let(:article_repository) { ArticleRepository.new }
+  let(:repository) { ArticleRepository.new }
   let(:params) { Hash[fetch_total: 10] }
 
   describe '#call' do
@@ -20,7 +19,7 @@ RSpec.describe Web::Controllers::Articles::Fetch, type: :action do
         action.call(params)
       end
 
-      articles = article_repository.all
+      articles = repository.all
       expect(articles.count).to eql(3)
     end
   end
