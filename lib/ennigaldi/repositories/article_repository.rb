@@ -10,17 +10,23 @@ class ArticleRepository < Hanami::Repository
     process_images(article_data, new_article)
   end
 
-  # TODO: define below to work with any attribute instead?
-  def find_by_external_id(id)
-    articles.where(external_id: id).one
-  end
-
   def all_with_images
     aggregate(:images).map_to(Article).to_a
   end
 
   def find_with_images(id)
     aggregate(:images).where(id: id).map_to(Article).one
+  end
+
+  # TODO: add method for searching with LIKE operator for content + content_summary
+  %w[external_id title types authors].each do |attribute|
+    define_method("find_by_#{attribute}") do |value|
+      articles.where("#{attribute}": value.to_s).one
+    end
+
+    define_method("find_by_#{attribute}_with_images") do |value|
+      aggregate(:images).where("#{attribute}": value.to_s).map_to(Article).one
+    end
   end
 
   private
