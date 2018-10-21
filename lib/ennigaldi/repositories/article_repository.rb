@@ -18,7 +18,6 @@ class ArticleRepository < Hanami::Repository
     aggregate(:images).where(id: id).map_to(Article).one
   end
 
-  # TODO: add method for searching with LIKE operator for content + content_summary
   %w[external_id title types authors].each do |attribute|
     define_method("find_by_#{attribute}") do |value|
       articles.where("#{attribute}": value.to_s).one
@@ -27,6 +26,11 @@ class ArticleRepository < Hanami::Repository
     define_method("find_by_#{attribute}_with_images") do |value|
       aggregate(:images).where("#{attribute}": value.to_s).map_to(Article).one
     end
+  end
+
+  # content_summary would be nicer, but many articles don't even have one
+  def find_by_content(content)
+    articles.where(Sequel.lit("content LIKE '%#{content}%'")).one
   end
 
   private
