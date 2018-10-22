@@ -28,9 +28,8 @@ class ArticleRepository < Hanami::Repository
     end
   end
 
-  # content_summary would be nicer, but many articles don't even have one
-  def find_by_content(content)
-    articles.where(Sequel.lit("content LIKE '%#{content}%'")).one
+  def search_by_type(string)
+    articles.where(Sequel.lit("types LIKE '%#{string}%'")).one
   end
 
   private
