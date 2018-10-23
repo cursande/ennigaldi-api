@@ -5,6 +5,42 @@ class ArticleRepository < Hanami::Repository
     has_many :images
   end
 
+  # Where we might want to match the whole case, and return only one result
+  FINDABLE_ATTRIBUTES = %w[external_id title]
+
+  # Where it might make more sense to pattern match, and return all results
+  SEARCHABLE_ATTRIBUTES = %w[content content_summmary types authors]
+
+  FINDABLE_ATTRIBUTES.each do |attribute|
+    define_method("find_by_#{attribute}") do |value|
+      articles
+        .where("#{attribute}": value.to_s)
+        .one
+    end
+
+    define_method("find_by_#{attribute}_with_images") do |value|
+      aggregate(:images)
+        .where("#{attribute}": value.to_s)
+        .map_to(Article)
+        .one
+    end
+  end
+
+  SEARCHABLE_ATTRIBUTES.each do |attribute|
+    define_method("search_by_#{attribute}") do |value|
+      articles
+        .where(Sequel.lit("#{attribute} ILIKE '%#{value}%'"))
+        .to_a
+    end
+
+    define_method("search_by_#{attribute}_with_images") do |value|
+      aggregate(:images)
+        .where(Sequel.lit("#{attribute} ILIKE '%#{value}%'"))
+        .map_to(Article)
+        .to_a
+    end
+  end
+
   def create_with_images(article_data)
     new_article = create(attributes(article_data))
     process_images(article_data, new_article)
@@ -16,20 +52,6 @@ class ArticleRepository < Hanami::Repository
 
   def find_with_images(id)
     aggregate(:images).where(id: id).map_to(Article).one
-  end
-
-  %w[external_id title types authors].each do |attribute|
-    define_method("find_by_#{attribute}") do |value|
-      articles.where("#{attribute}": value.to_s).one
-    end
-
-    define_method("find_by_#{attribute}_with_images") do |value|
-      aggregate(:images).where("#{attribute}": value.to_s).map_to(Article).one
-    end
-  end
-
-  def search_by_type(string)
-    articles.where(Sequel.lit("types LIKE '%#{string}%'")).one
   end
 
   private
