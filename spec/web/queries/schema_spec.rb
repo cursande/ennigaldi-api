@@ -23,7 +23,19 @@ RSpec.describe EnnigaldiSchema do
 
   describe 'fields' do
     describe 'articles' do
-      let(:query_string) { %({ articles { id title contentSummary images { uri } } }) }
+      let(:query_string) {
+        %(
+          {
+            articles {
+              id
+              title
+              contentSummary
+              images {
+                uri
+              }
+            }
+          }
+         )}
       let(:response_hash) { result.to_h }
 
       it 'returns an array of all the articles in the db with the selected fields and associated images' do
@@ -34,7 +46,16 @@ RSpec.describe EnnigaldiSchema do
     end
 
     describe 'article' do
-      let(:query_string) { %({ article(id: #{article.id}) { title images { uri } } }) }
+      let(:query_string) {
+        %(
+          {
+            article(id: #{article.id}) {
+              title
+              images {
+                uri
+              }
+            }
+          })}
       let(:response_hash) { result.to_h }
 
       it 'returns the title and associated images for the article' do
