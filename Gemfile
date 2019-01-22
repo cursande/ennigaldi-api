@@ -37,6 +37,9 @@ gem 'aws-sdk'
 # query language
 gem 'graphql'
 
+# CORS
+gem 'rack-cors', require: 'rack/cors'
+
 group :development do
   gem 'hanami-webconsole'
   gem 'rubocop', require: false

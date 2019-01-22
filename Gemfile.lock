@@ -754,6 +754,7 @@ GEM
       pry (>= 0.9.11)
     public_suffix (3.0.2)
     rack (2.0.6)
+    rack-cors (1.0.2)
     rack-protection (2.0.3)
       rack
     rack-test (1.0.0)
@@ -854,6 +855,7 @@ DEPENDENCIES
   pg
   pry
   pry-stack_explorer
+  rack-cors
   rake
   redis
   redis-namespace
