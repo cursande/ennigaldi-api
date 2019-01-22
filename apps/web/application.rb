@@ -85,7 +85,7 @@ module Web
       #             (only `:json` is supported)
       #           Object, the parser
       #
-      # body_parsers :json
+      body_parsers :json
 
       # When it's true and the router receives a non-encrypted request (http),
       # it redirects to the secure equivalent (https). Disabled by default.
@@ -145,6 +145,14 @@ module Web
       ##
       # SECURITY
       #
+
+      # Allow cross-origin requests
+      middleware.use Rack::Cors do
+        allow do
+          origins '*'
+          resource '*', headers: :any, methods: [:get, :post, :patch, :options]
+        end
+      end
 
       # X-Frame-Options is a HTTP header supported by modern browsers.
       # It determines if a web page can or cannot be included via <frame> and

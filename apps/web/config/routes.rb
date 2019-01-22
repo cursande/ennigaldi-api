@@ -4,4 +4,4 @@
 # Example:
 # get '/hello', to: ->(env) { [200, {}, ['Hello from Hanami!']] }
 get '/articles', to: 'articles#fetch'
-get '/graphql/execute', to: 'graphql#execute'
+post '/graphql/execute', to: 'graphql#execute'
